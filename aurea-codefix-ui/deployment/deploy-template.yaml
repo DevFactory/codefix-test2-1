@@ -1,0 +1,91 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: codefix-ui-<environment>
+  labels:
+    app: codefix-ui-<environment>
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: codefix-ui-<environment>
+  template:
+    metadata:
+      labels:
+        app: codefix-ui-<environment>
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: codefix-ui-<environment>
+                  operator: In
+                  values:
+                  - codefix-ui-<environment>
+              topologyKey: failure-domain.beta.kubernetes.io/zone
+      containers:
+      - name: codefix-ui-<environment>
+        image: registry.devfactory.com/devfactory/codefix-ui:<image_name>
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        env:
+          - name: VERSION
+            value: <rolling-version>
+          - name: AUTH0_DOMAIN
+            value: <auth-domain>
+          - name: AUTH0_CLIENTID
+            value: <auth-clientid>
+          - name: AUTH0_AUDIENCE
+            value: <auth-audience>
+          - name: CODERAMP_URL
+            value: <codeRampUrl>
+          - name: CODEFIX_BACKEND
+            value: <codeFixBackendUrl>
+          - name: TICKETING_SYSTEM_URL
+            value: <codeserver-ticketing-system>
+
+
+################## Insight Api Service #################
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: codefix-ui-<environment>
+spec:
+  selector:
+    app: codefix-ui-<environment>
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+################## Insight Api Ingress #################
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: codefix-ui-<environment>
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/ingress.class: <ingress-class>
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+spec:
+  tls:
+  - secretName: codefix-ui-cert
+    hosts:
+    - <host>
+  rules:
+  - host: <host>
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: codefix-ui-<environment>
+          servicePort: 80

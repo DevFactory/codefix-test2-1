@@ -1,0 +1,30 @@
+<df-topbar>
+  <div class="left-group d-flex justify-content-between align-items-center">
+    <div class="logo d-flex align-items-center">
+      <div class="logo__image mr-3"></div>
+    </div>
+  </div>
+
+  <div class="center-group">
+    <img src="/assets/img/pic-logo-codefix.svg"
+         alt="CodeFix"
+         height="30px">
+  </div>
+
+  <div class="right-group pr-3">
+    <df-user-profile [userName]="user.name" [image]="user.picture">
+      <button class="dropdown-item" (click)="logout()">
+        <i class="fa fa-fw fa-sign-out" aria-hidden="true"></i>
+        Sign Out
+      </button>
+    </df-user-profile>
+  </div>
+</df-topbar>
+
+<div class="col p-0 d-flex">
+  <main class="col p-0 d-flex flex-column overflow-hidden">
+    <div class="overlay">
+    </div>
+    <router-outlet></router-outlet>
+  </main>
+</div>

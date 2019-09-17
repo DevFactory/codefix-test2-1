@@ -1,0 +1,61 @@
+<df-card class="d-flex flex-column grid">
+  <ng-container *ngIf="!completedList || completedList.length < 1">
+      <div class="d-flex flex-column justify-content-center align-items-center analyzing">
+          <img  src="/assets/img/issues/detecting-issues.gif"
+                alt="detecting issues animation">
+          <h4>No Issues done...</h4>
+        </div>
+  </ng-container>
+  <ng-container *ngIf="loaded && (completedList && completedList.length > 0)">
+    <div class="mb-1 pt-3 px-3 d-flex justify-content-between">
+      <div class="d-flex flex-column">
+        <span class="text-secondary">
+          List of issues done found.
+        </span>
+      </div>
+    </div>
+  </ng-container>
+  <df-card-content class="py-0 d-flex flex-column">
+    <div *ngIf="!completedList"
+         class="col py-5 d-flex justify-content-center align-items-center">
+      <div class="df-loader"></div>
+    </div>
+    <ng-container *ngIf="loaded && (completedList && completedList.length > 0)">
+      <df-grid #grid 
+               class="d-block col p-0" 
+               [value]="completedList"
+               [scrollable]="true">
+
+        <df-grid-column field="type" header="Issue type">
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <div class="py-1 d-flex">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <span> {{ issue.type }} &#58;&#58; {{ issue.description }}</span>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </df-grid-column>
+       
+        <df-grid-column field="repository" header="Repository" styleClass="grid__repository">
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <ng-container>
+              <div [innerHTML]="formatRepositoryName(issue.repository)"></div>
+            </ng-container>
+          </ng-template>
+        </df-grid-column>
+  
+        <df-grid-column field="branch" header="Branch" styleClass="grid__branch">
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <ng-container>{{ issue.branch }}</ng-container>
+          </ng-template>
+        </df-grid-column>       
+
+      </df-grid>
+    </ng-container>
+  </df-card-content>
+
+  <df-card-footer class="px-0 py-2 d-flex justify-content-center" *ngIf="loaded && (completedList && completedList.length > 0)">
+  </df-card-footer>
+</df-card>

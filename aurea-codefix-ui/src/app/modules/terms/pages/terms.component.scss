@@ -1,0 +1,17 @@
+:host {
+  ::ng-deep {
+    .df-card {
+      height: calc(100vh - 79px);
+      min-height: 400px;
+  
+      &__content {
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.terms__container {
+  width: 100%;
+  padding: 15px 5px;
+}

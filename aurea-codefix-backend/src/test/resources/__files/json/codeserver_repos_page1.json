@@ -1,0 +1,32 @@
+{
+  "selfLink": "http://localhost:8090/api/v2/user/repositories?limit=1&offset=0",
+  "kind": "Page",
+  "next": "http://localhost:8090/api/v2/user/repositories?limit=1&offset=1",
+  "prev": "",
+  "pageOf": "http://localhost:8090/api/v2/user/repositories",
+  "contents": [
+    {
+      "id": 8019,
+      "modificationDate": "2019-03-26T13:31:49Z",
+      "startDate": "2019-03-26T13:31:28Z",
+      "endDate": null,
+      "remoteUrl": "https://github.com/test-company/example-repo.git",
+      "branch": "dBlmLQBIRK2dowU9jlLVErABZBicp3",
+      "sourceBranch": null,
+      "parentRepoId": null,
+      "kind": null,
+      "credentials": null,
+      "language": "Java",
+      "replayHistoricCommits": false,
+      "hasHistoricCommits": true,
+      "latestRevision": {
+        "id": 2937901,
+        "rev": "bf9487550be972b065e41392afbf8e9768449762",
+        "shortRev": "bf94875",
+        "commitTime": "2019-01-08T06:10:11Z"
+      },
+      "status": "READY",
+      "name": "JhOg5EFi8eepS8szh3EJy5RFxTGuGm"
+    }
+  ]
+}

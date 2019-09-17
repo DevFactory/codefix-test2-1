@@ -1,0 +1,98 @@
+<df-card class="d-flex flex-column grid">
+  <ng-container *ngIf="loaded && repoPage.isNotEmpty()">
+    <div class="mb-1 pt-3 px-3 d-flex justify-content-between">
+      <div class="d-flex flex-column">
+              <span class="text-secondary">
+                Here is the list of available repositories that can be used in CodeFix.
+              </span>
+        <span class="text-secondary">Toggle the ones you want CodeFix to check and then specify a branch.</span>
+      </div>
+      <div class="d-flex align-items-center">
+        <button type="button"
+                theme="info"
+                (click)="onAddRepoClick()"
+                df-button>
+          <i class="fa fa-plus mr-2" aria-hidden="true"></i>Add More Repos
+        </button>
+      </div>
+    </div>
+  </ng-container>
+  <df-card-content class="py-0 d-flex flex-column">
+    <div *ngIf="!repoPage"
+         class="col py-5 d-flex justify-content-center align-items-center">
+      <div class="df-loader"></div>
+    </div>
+    <ng-container *ngIf="loaded && repoPage.isNotEmpty()">
+      <df-grid #grid
+               class="d-block col p-0"
+               [value]="repoPage.content"
+               [scrollable]="true">
+        <df-grid-column
+          field="url"
+          header="Repository"
+          styleClass="grid__project">
+          <ng-template let-row="rowData" dfGridTemplate="body">
+            <div class="position-relative">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="repo__col-title">
+                  <div [innerHTML]="formatRowName(row.url)"></div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </df-grid-column>
+        <df-grid-column header="Branch" styleClass="grid__branch">
+          <ng-template let-row="rowData" dfGridTemplate="body">
+            <df-select filterPlaceholder="Search repository" [filterable]="true">
+              <df-option *ngFor="let branch of row.branches;"
+                         [selected]="row.branch"
+                         [value]="branch.name"
+                         id="{{branch.name}}">
+                {{ branch.name }}
+              </df-option>
+            </df-select>
+          </ng-template>
+        </df-grid-column>
+
+        <df-grid-column field="active" styleClass="grid__active">
+          <ng-template let-row="rowData"
+                       dfGridTemplate="body">
+            <df-slide-toggle container="body"
+                             placement="left"
+                             [(ngModel)]="row.active"
+                             (change)="onActivate($event.checked, row.id)"></df-slide-toggle>
+          </ng-template>
+        </df-grid-column>
+      </df-grid>
+    </ng-container>
+    <div *ngIf="loaded && repoPage.isEmpty()"
+         class="col px-0 d-flex flex-column justify-content-center align-items-center">
+      <h4>There is no data to show</h4>
+      <div class="no-repo__note text-center">
+        <div>To start fixing the code, you need to add repositories to CodeFix first.</div>
+        <div>Click on the button below to add new repositories from your GitHub account.</div>
+      </div>
+      <div class="d-flex mt-3">
+        <button class="mr-3"
+                type="button"
+                theme="info"
+                df-button
+                (click)="onAddRepoClick()">
+          <i class="fa fa-plus mr-2"
+             aria-hidden="true"></i>Add Repositories
+        </button>
+      </div>
+    </div>
+  </df-card-content>
+  <df-card-footer class="px-0 py-2 d-flex justify-content-center" *ngIf="loaded && repoPage.isNotEmpty()">
+    <df-table-paginator class="paginator"
+                        [collectionSize]="repoPage.total"
+                        [pageSize]="20"
+                        [showSearchInput]="false"
+                        [showExcel]="false"
+                        [showPrint]="false"
+                        [(currentPage)]="repoPage.currentPage"
+                        (pageChange)="onPageChange($event)">
+    </df-table-paginator>
+  </df-card-footer>
+</df-card>

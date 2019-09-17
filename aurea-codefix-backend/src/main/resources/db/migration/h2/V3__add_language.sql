@@ -1,0 +1,1 @@
+ALTER TABLE `REPOSITORIES` ADD COLUMN `language` nvarchar(255) NOT NULL AFTER `branch`;

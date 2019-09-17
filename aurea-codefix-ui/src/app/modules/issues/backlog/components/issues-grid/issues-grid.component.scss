@@ -1,0 +1,296 @@
+@import 'palette';
+@import 'variables';
+
+$row-selected: #eaf5fe;
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin column-text-truncate() {
+  .df-grid-table-body__cell-data {
+    display: block;
+    @include text-truncate();
+  }
+}
+
+@mixin placeholder() {
+  padding-left: 34px;
+}
+
+:host {
+  ::ng-deep {
+    .df-breadcrumbs {
+      padding: 0;
+    }
+
+    .df-grid__data {
+      user-select: none;
+      cursor: pointer;
+
+      &--over {
+        border-top: 2px solid $df-blue;
+      }
+    }
+
+    .df-button {
+      transition: none;
+    }
+
+    .df-grid__row--selected {
+      background: $row-selected;
+    }
+
+    .df-grid__row--data:nth-child(100) {
+      border-bottom: 4px solid black; 
+    }
+
+    .grid {
+      height: calc(100vh - 214px);
+
+      &__row {
+        &--moved {
+          background: $row-selected;
+        }
+      }
+
+      &__selection {
+        width: 38px;
+
+        .df-checkbox {
+          &__icon {
+            margin-right: 0;
+
+            .fa-check-square {
+              color: $df-blue !important;
+            }
+
+            &--disabled {
+              display: none;
+            }
+          }
+
+          &__layout {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &__order {
+        width: 55px;
+      }
+
+      &__repository {
+        width: 215px;
+        @include column-text-truncate();
+      }
+
+      &__branch {
+        width: 180px;
+        @include column-text-truncate();
+      }
+
+      &__directory {
+        width: 105px;
+        @include column-text-truncate();
+      }
+
+      &__loc {
+        width: 85px;
+      }
+
+      &__copies {
+        width: 115px;
+      }
+
+      &__block-size {
+        width: 110px;
+      }
+
+      &__menu {
+        width: 80px;
+
+        .grid__menu-icon {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1;
+
+          &--lock {
+            color: $df-blue;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      &__separator {
+        color: $main-text-color;
+
+        &-wrapper {
+          border-bottom: none;
+
+          .df-grid-table-body__cell {
+            padding: 14px 0 7px 8.5px;
+          }
+        }
+      }
+    }
+
+    .df-grid-table-body__cell {
+      overflow: unset;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .dropdown-menu {
+      border-radius: 0;
+      min-width: 100%;
+      margin-top: 13px;
+      border-top: 2px solid $df-blue;
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: calc(50% - #{$caret-width});
+        top: -$caret-width;
+        border-style: solid;
+        border-width: 0 $caret-width $caret-width $caret-width;
+        border-color: transparent transparent $df-blue transparent;
+        line-height: 0;
+      }
+    }
+
+    ::ng-deep .tutorial__filter {
+      background: rgba($df-blue, 0.15);
+      border-radius: 11px;
+    }
+  }
+}
+
+h4 {
+  span {
+    font-size: 14px;
+    color: map_get($df-light, 7);
+  }
+}
+
+.type {
+  &__text {
+    text-decoration: underline;
+    color: $main-text-color;
+  }
+}
+
+.dragged {
+  top: 0;
+  left: 0;
+  background: #ecf8fd;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(black, 0.12), 0 1px 2px rgba(black, 0.24);
+  transform: translate(99999px, 99999px);
+  z-index: 2;
+  pointer-events: none;
+
+  > .number {
+    width: 26px;
+    height: 26px;
+    color: map-get($df-light, 1);
+    background: $df-blue;
+    border-radius: 13px;
+  }
+}
+
+.navigation {
+  z-index: 1;
+}
+
+.menu {
+  border: 1px solid map-get($df-light, 6);
+  border-radius: 3px;
+  background: map-get($df-light, 1);
+  cursor: pointer;
+
+  &__icon {
+    color: $df-blue;
+  }
+
+  .dropdown-item:active {
+    .menu__icon {
+      color: map-get($df-light, 1);
+    }
+  }
+
+  &__item {
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__toggle {
+    .df-button {
+      transition: none;
+      background-color: transparent !important;
+
+      &:hover {
+        color: $df-blue;
+        background-color: transparent !important;
+      }
+
+      &:active {
+        &::before {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  &__label {
+    color: #16181b;
+  }
+
+  &__input {
+    width: 52px;
+
+    input {
+      height: 25px;
+    }
+
+    ::ng-deep .df-input__wrapper {
+      padding: 0 3.5px;
+    }
+  }
+
+  &__move {
+    height: 25px;
+  }
+}
+
+.tutorial {
+  font-size: 12.25px;
+  color: map-get($df-light, 1);
+  background: rgba(#000, 0.9);
+  border-radius: 3px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 5px solid rgba(#000, 0.9);
+    transform: translateX(-50%);
+  }
+}
+
+.loading,
+.analyzing,
+.grid__wrapper {
+  height: calc(100vh - 151px);
+}

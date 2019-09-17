@@ -1,0 +1,69 @@
+# IDEA
+.idea
+.shelf
+*.iws
+*.iml
+*.ipr
+*.ids
+**/out/
+classes/
+bin/
+rebel.xml
+
+# Eclipse
+.project
+.settings
+.classpath
+.metadata
+.recommenders
+.pydevproject
+RemoteSystemsTempFiles/
+
+# NetBeans
+.nb-gradle
+.nb-gradle-properties
+nbproject
+nbactions.xml
+
+# Mac junk
+.DS_Store
+
+# Binary
+*.class
+#*.jar
+*.war
+*.zip
+*.tar.*
+
+# JS
+node_modules/
+aurea-codefix-ui/node_modules/
+dll/
+dist/
+.tmp/
+.sass-cache/
+bower_components/
+
+# Gradle
+.gradle/
+build/
+reports/
+
+# Maven
+target/
+
+# Other temp files
+*.log*
+.pid.lock
+
+# bkp files
+*.bak
+*.orig
+
+# Avoid ignoring Gradle wrapper
+!gradle/wrapper/*
+
+# Virtual envs and devspace temp files
+venv
+devspace/venv
+devspace/proxy-devspace.conf

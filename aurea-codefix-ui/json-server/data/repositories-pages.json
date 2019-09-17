@@ -1,0 +1,281 @@
+[
+  {
+    "total": 43,
+    "pages": 3,
+    "currentPage": 1,
+    "content": [
+      {
+        "id": 1,
+        "url": "https://github.com/npaurea/Java.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 2,
+        "url": "https://github.com/ashishaurea/restx.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 3,
+        "url": "https://github.com/trilogy-group/aurea-codefix.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 4,
+        "url": "https://github.com/ashishaurea/telegram-api.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 5,
+        "url": "https://github.com/chomnoue/springfox-demos.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 6,
+        "url": "https://github.com/trilogy-group/codegraph.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 7,
+        "url": "https://github.com/rathnasuresh/demo.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 8,
+        "url": "https://github.com/ashishaurea/openstack4j.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 9,
+        "url": "https://github.com/cristhian-recalde/sharpvfi.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 10,
+        "url": "https://github.com/trilogy-group/acr-devfactory-codeserver-framework.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 11,
+        "url": "https://github.com/npaurea/rgn_duplicate_code_limit_test711.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 12,
+        "url": "https://github.com/ashishaurea/Java-6.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 13,
+        "url": "https://github.com/ashishaurea/javakiteconnect.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 14,
+        "url": "https://github.com/ashishaurea/code-13.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 15,
+        "url": "https://github.com/trilogy-group/Acorn-EPS-Test.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 16,
+        "url": "https://github.com/trilogy-group/jive-analytics-ca-ingress-redshift.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 17,
+        "url": "https://github.com/jcamiloradamesa/featureqa-gherkin-testrail-poc-javaapp.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 18,
+        "url": "https://github.com/cesarguijarro-aurea/evosuite.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 19,
+        "url": "https://github.com/trilogy-group/jive-analytics-ca-clapi.git",
+        "branch": "1.1-release",
+        "active": false
+      },
+      {
+        "id": 20,
+        "url": "https://github.com/trilogy-group/brp_rules_test.git",
+        "branch": "master",
+        "active": true
+      }
+    ]
+  },
+  {
+    "total": 43,
+    "pages": 3,
+    "currentPage": 2,
+    "content": [
+      {
+        "id": 21,
+        "url": "https://github.com/trilogy-group/jive-analytics-cloudalytics-api.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 22,
+        "url": "https://github.com/ashishaurea/RickText.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 23,
+        "url": "https://github.com/ashishaurea/spring-cloud-codegen.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 24,
+        "url": "https://github.com/npaurea/rgn_duplicate_code_limit_test714.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 25,
+        "url": "https://github.com/ashishaurea/Code4Reference.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 26,
+        "url": "https://github.com/tromano-aurea/kubespray.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 27,
+        "url": "https://github.com/chomnoue/neo4jJhipserTemplate.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 28,
+        "url": "https://github.com/ashishaurea/JavaTutorial.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 29,
+        "url": "https://github.com/ashishaurea/duplicates-two-kinds-only.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 30,
+        "url": "https://github.com/chomnoue/spring-cloud-event-sourcing-example.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 31,
+        "url": "https://github.com/trilogy-group/GeneralPatterns.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 32,
+        "url": "https://github.com/trilogy-group/jacoco-test-app.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 33,
+        "url": "https://github.com/tromano-aurea/Java-Interview.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 34,
+        "url": "https://github.com/chomnoue/MyAppPortfolio.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 35,
+        "url": "https://github.com/ashishaurea/code-1.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 36,
+        "url": "https://github.com/trilogy-group/aurea-aes-edimaps.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 37,
+        "url": "https://github.com/trilogy-group/jive-analytics-ca-query.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 38,
+        "url": "https://github.com/ashishaurea/PDFLayoutTextStripper.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 39,
+        "url": "https://github.com/Ashish926930/RepositoryNameLong.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 40,
+        "url": "https://github.com/trilogy-group/ignite-acorn-pa5g.git",
+        "branch": "develop-AAA",
+        "active": false
+      }
+    ]
+  },
+  {
+    "total": 43,
+    "pages": 3,
+    "currentPage": 3,
+    "content": [
+      {
+        "id": 41,
+        "url": "https://github.com/ululam/antp-smoke.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 42,
+        "url": "https://github.com/TheAlgorithms/Java.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 43,
+        "url": "https://github.com/xthian82/demo.git",
+        "branch": "master",
+        "active": false
+      }
+    ]
+  }
+]

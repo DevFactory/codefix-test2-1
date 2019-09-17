@@ -1,0 +1,7 @@
+ALTER TABLE REPOSITORIES
+    ADD FOREIGN KEY (customer_id)
+    REFERENCES customers(id);
+
+ALTER TABLE ORDER_INFORMATION
+    ADD FOREIGN KEY (customer_id)
+    REFERENCES customers(id);

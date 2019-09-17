@@ -1,0 +1,43 @@
+<df-card class="d-block">
+  <df-card-header class="d-block p-0">
+    <div class="p-3 d-flex justify-content-between align-items-center" *ngIf="order">
+            <span class="text-secondary">
+              <ng-container>
+                List of issues that are being fixed. They will be ready at {{ order.dueDate | date:'MMM d' }}.
+              </ng-container>
+            </span>
+    </div>
+  </df-card-header>
+  <df-card-content class="py-0 d-flex flex-column grid">
+    <df-grid *ngIf="loaded"
+             class="d-block col p-0"
+             [value]="order.activeIssues"
+             [scrollable]="true">
+      <df-grid-column field="type" header="Issue type">
+        <ng-template let-issue="rowData" dfGridTemplate="body">
+          <div class="py-1 d-flex">
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center">
+                <span> {{ issue.type }} &#58;&#58; {{ issue.description }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </df-grid-column>
+
+      <df-grid-column field="repository" header="Repository" styleClass="grid__repository">
+        <ng-template let-issue="rowData" dfGridTemplate="body">
+          <ng-container>
+            <div [innerHTML]="formatRepositoryName(issue.repository)"></div>
+          </ng-container>
+        </ng-template>
+      </df-grid-column>
+
+      <df-grid-column field="branch" header="Branch" styleClass="grid__branch">
+        <ng-template let-issue="rowData" dfGridTemplate="body">
+          <ng-container>{{ issue.branch }}</ng-container>
+        </ng-template>
+      </df-grid-column>
+    </df-grid>
+  </df-card-content>
+</df-card>

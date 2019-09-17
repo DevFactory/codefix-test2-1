@@ -1,0 +1,129 @@
+kind: Deployment
+apiVersion: apps/v1beta2
+metadata:
+  name: codefix-<environment>
+  labels:
+    app: codefix-<environment>
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: codefix-<environment>
+  template:
+    metadata:
+      labels:
+        app: codefix-<environment>
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: codefix-<environment>
+                      operator: In
+                      values:
+                        - codefix-<environment>
+                topologyKey: failure-domain.beta.kubernetes.io/zone
+      containers:
+      - name: codefix-<environment>
+        image: registry2.swarm.devfactory.com/v2/devfactory/codefix:<image_name>
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        env:
+          - name: ENV_PROFILE
+            value: <env-profile>
+          - name: AWS_ACCESS_KEY_ID
+            value: <aws-access-key-id>
+          - name: AWS_SECRET_ACCESS_KEY
+            value: <aws-secret-access-key>
+          - name: ENVIRONMENT
+            value: <environment>
+          - name: app.integration.codeserver.codeServerUrl
+            value: <codeserver-appBaseUrl>
+          - name: app.integration.brp.notificationQueue
+            value: <brp-notificationQueue>
+          - name: app.integration.brp.brpUrl
+            value: <brp-url>
+          - name: app.integration.assemblyline.fixesQueue
+            value: <assemblyline-fixesQueue>
+          - name: app.integration.assemblyline.confirmationsQueue
+            value: <assemblyline-confirmationsQueue>
+          - name: app.notification.frontendUrl
+            value: <frontend-url>
+          - name: app.integration.assemblyline.orderQueue
+            value: <assemblyline-orderQueue>
+          - name: VERSION
+            value: <rolling-version>
+          - name: JAVA_OPTS
+            value: "-Xmx2g -XX:+DisableExplicitGC -XX:+PrintGCDetails -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCDateStamps -Xloggc:gclog.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=10000k"
+
+################## Insight Api Service #################
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: codefix-<environment>
+spec:
+  selector:
+    app: codefix-<environment>
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+################## Insight Api Ingress #################
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: codefix-<environment>
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    kubernetes.io/ingress.class: <ingress-class>
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+spec:
+  tls:
+    - secretName: codefix-cert
+      hosts:
+        - <host>
+  rules:
+    - host: <host>
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: codefix-<environment>
+              servicePort: 8080
+
+################## Insight Api Ingress Github Webhooks #################
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: codefix-webhook-<environment>
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /api/webhooks/github-event
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    kubernetes.io/ingress.class: public
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+spec:
+  tls:
+    - secretName: codefix-cert
+      hosts:
+        - <webhook-host>
+  rules:
+    - host: <webhook-host>
+      http:
+        paths:
+          - path: /github-event
+            backend:
+              serviceName: codefix-<environment>
+              servicePort: 8080
+

@@ -1,0 +1,30 @@
+@import '~@devfactory/ngx-df/core/core';
+
+:host {
+  ::ng-deep {
+    df-topbar {
+      nav {
+        background-color: map-get($df-dark, 4);
+      }
+    }
+
+    button.df-hamburger {
+      display: none;
+    }
+  }
+}
+
+.left-group {
+  padding: 0 14px;
+}
+
+.logo {
+  &__image {
+    width: 102px;
+    height: 30px;
+    background-image: url('/assets/img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: -10px center;
+    background-size: 102px 30px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "/api/repositories": {
+    "target": "https://codefix-backend-qa.devfactory.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/api/issues": {
+    "target": "https://codefix-backend-qa.devfactory.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/api/orders": {
+    "target": "https://codefix-backend-qa.devfactory.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,826 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "type": "BRP",
+    "description": "Issue 1",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "type": "BRP",
+    "description": "Issue 2",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "type": "BRP",
+    "description": "Issue 3",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "type": "BRP",
+    "description": "Issue 4",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 5,
+    "order": 5,
+    "type": "BRP",
+    "description": "Issue 5",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 6,
+    "order": 6,
+    "type": "BRP",
+    "description": "Issue 6",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 7,
+    "order": 7,
+    "type": "BRP",
+    "description": "Issue 7",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 8,
+    "order": 8,
+    "type": "BRP",
+    "description": "Issue 8",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 9,
+    "order": 9,
+    "type": "BRP",
+    "description": "Issue 9",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 10,
+    "order": 10,
+    "type": "BRP",
+    "description": "Issue 10",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 11,
+    "order": 11,
+    "type": "BRP",
+    "description": "Issue 11",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 12,
+    "order": 12,
+    "type": "BRP",
+    "description": "Issue 12",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 13,
+    "order": 13,
+    "type": "BRP",
+    "description": "Issue 13",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 14,
+    "order": 14,
+    "type": "BRP",
+    "description": "Issue 14",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 15,
+    "order": 15,
+    "type": "BRP",
+    "description": "Issue 15",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 16,
+    "order": 16,
+    "type": "BRP",
+    "description": "Issue 16",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 17,
+    "order": 17,
+    "type": "BRP",
+    "description": "Issue 17",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 18,
+    "order": 18,
+    "type": "BRP",
+    "description": "Issue 18",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 19,
+    "order": 19,
+    "type": "BRP",
+    "description": "Issue 19",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 20,
+    "order": 20,
+    "type": "BRP",
+    "description": "Issue 20",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 21,
+    "order": 21,
+    "type": "BRP",
+    "description": "Issue 21",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 22,
+    "order": 22,
+    "type": "BRP",
+    "description": "Issue 22",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 23,
+    "order": 23,
+    "type": "BRP",
+    "description": "Issue 23",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 24,
+    "order": 24,
+    "type": "BRP",
+    "description": "Issue 24",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 25,
+    "order": 25,
+    "type": "BRP",
+    "description": "Issue 25",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 26,
+    "order": 26,
+    "type": "BRP",
+    "description": "Issue 26",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 27,
+    "order": 27,
+    "type": "BRP",
+    "description": "Issue 27",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 28,
+    "order": 28,
+    "type": "BRP",
+    "description": "Issue 28",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 29,
+    "order": 29,
+    "type": "BRP",
+    "description": "Issue 29",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 30,
+    "order": 30,
+    "type": "BRP",
+    "description": "Issue 30",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 31,
+    "order": 31,
+    "type": "BRP",
+    "description": "Issue 31",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 32,
+    "order": 32,
+    "type": "BRP",
+    "description": "Issue 32",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 33,
+    "order": 33,
+    "type": "BRP",
+    "description": "Issue 33",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 34,
+    "order": 34,
+    "type": "BRP",
+    "description": "Issue 34",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 35,
+    "order": 35,
+    "type": "BRP",
+    "description": "Issue 35",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 36,
+    "order": 36,
+    "type": "BRP",
+    "description": "Issue 36",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 37,
+    "order": 37,
+    "type": "BRP",
+    "description": "Issue 37",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 38,
+    "order": 38,
+    "type": "BRP",
+    "description": "Issue 38",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 39,
+    "order": 39,
+    "type": "BRP",
+    "description": "Issue 39",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 40,
+    "order": 40,
+    "type": "BRP",
+    "description": "Issue 40",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 41,
+    "order": 41,
+    "type": "BRP",
+    "description": "Issue 41",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 42,
+    "order": 42,
+    "type": "BRP",
+    "description": "Issue 42",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 43,
+    "order": 43,
+    "type": "BRP",
+    "description": "Issue 43",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 44,
+    "order": 44,
+    "type": "BRP",
+    "description": "Issue 44",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 45,
+    "order": 45,
+    "type": "BRP",
+    "description": "Issue 45",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 46,
+    "order": 46,
+    "type": "BRP",
+    "description": "Issue 46",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 47,
+    "order": 47,
+    "type": "BRP",
+    "description": "Issue 47",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 48,
+    "order": 48,
+    "type": "BRP",
+    "description": "Issue 48",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 49,
+    "order": 49,
+    "type": "BRP",
+    "description": "Issue 49",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 50,
+    "order": 50,
+    "type": "BRP",
+    "description": "Issue 50",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 51,
+    "order": 51,
+    "type": "BRP",
+    "description": "Issue 51",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 52,
+    "order": 52,
+    "type": "BRP",
+    "description": "Issue 52",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 53,
+    "order": 53,
+    "type": "BRP",
+    "description": "Issue 53",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 54,
+    "order": 54,
+    "type": "BRP",
+    "description": "Issue 54",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 55,
+    "order": 55,
+    "type": "BRP",
+    "description": "Issue 55",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 56,
+    "order": 56,
+    "type": "BRP",
+    "description": "Issue 56",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 57,
+    "order": 57,
+    "type": "BRP",
+    "description": "Issue 57",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 58,
+    "order": 58,
+    "type": "BRP",
+    "description": "Issue 58",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 59,
+    "order": 59,
+    "type": "BRP",
+    "description": "Issue 59",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 60,
+    "order": 60,
+    "type": "BRP",
+    "description": "Issue 60",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 61,
+    "order": 61,
+    "type": "BRP",
+    "description": "Issue 61",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 62,
+    "order": 62,
+    "type": "BRP",
+    "description": "Issue 62",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 63,
+    "order": 63,
+    "type": "BRP",
+    "description": "Issue 63",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 64,
+    "order": 64,
+    "type": "BRP",
+    "description": "Issue 64",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 65,
+    "order": 65,
+    "type": "BRP",
+    "description": "Issue 65",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 66,
+    "order": 66,
+    "type": "BRP",
+    "description": "Issue 66",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 67,
+    "order": 67,
+    "type": "BRP",
+    "description": "Issue 67",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 68,
+    "order": 68,
+    "type": "BRP",
+    "description": "Issue 68",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 69,
+    "order": 69,
+    "type": "BRP",
+    "description": "Issue 69",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 70,
+    "order": 70,
+    "type": "BRP",
+    "description": "Issue 70",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 71,
+    "order": 71,
+    "type": "BRP",
+    "description": "Issue 71",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 72,
+    "order": 72,
+    "type": "BRP",
+    "description": "Issue 72",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 73,
+    "order": 73,
+    "type": "BRP",
+    "description": "Issue 73",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 74,
+    "order": 74,
+    "type": "BRP",
+    "description": "Issue 74",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 75,
+    "order": 75,
+    "type": "BRP",
+    "description": "Issue 75",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 76,
+    "order": 76,
+    "type": "BRP",
+    "description": "Issue 76",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 77,
+    "order": 77,
+    "type": "BRP",
+    "description": "Issue 77",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 78,
+    "order": 78,
+    "type": "BRP",
+    "description": "Issue 78",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 79,
+    "order": 79,
+    "type": "BRP",
+    "description": "Issue 79",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 80,
+    "order": 80,
+    "type": "BRP",
+    "description": "Issue 60",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 81,
+    "order": 81,
+    "type": "BRP",
+    "description": "Issue 81",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 82,
+    "order": 82,
+    "type": "BRP",
+    "description": "Issue 82",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 83,
+    "order": 83,
+    "type": "BRP",
+    "description": "Issue 83",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 84,
+    "order": 84,
+    "type": "BRP",
+    "description": "Issue 84",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 85,
+    "order": 85,
+    "type": "BRP",
+    "description": "Issue 85",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 86,
+    "order": 86,
+    "type": "BRP",
+    "description": "Issue 86",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 87,
+    "order": 87,
+    "type": "BRP",
+    "description": "Issue 87",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 88,
+    "order": 88,
+    "type": "BRP",
+    "description": "Issue 88",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 89,
+    "order": 89,
+    "type": "BRP",
+    "description": "Issue 89",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 90,
+    "order": 90,
+    "type": "BRP",
+    "description": "Issue 90",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 91,
+    "order": 91,
+    "type": "BRP",
+    "description": "Issue 91",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 92,
+    "order": 92,
+    "type": "BRP",
+    "description": "Issue 92",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 93,
+    "order": 93,
+    "type": "BRP",
+    "description": "Issue 93",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 94,
+    "order": 94,
+    "type": "BRP",
+    "description": "Issue 94",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 95,
+    "order": 95,
+    "type": "BRP",
+    "description": "Issue 95",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 96,
+    "order": 96,
+    "type": "BRP",
+    "description": "Issue 96",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 97,
+    "order": 97,
+    "type": "BRP",
+    "description": "Issue 97",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 98,
+    "order": 98,
+    "type": "BRP",
+    "description": "Issue 98",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  },
+  {
+    "id": 99,
+    "order": 99,
+    "type": "BRP",
+    "description": "Issue 99",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 100,
+    "order": 100,
+    "type": "BRP",
+    "description": "Issue 100",
+    "repository": "https://github.com/ashishaurea/telegram-api.git",
+    "branch": "master"
+  },
+  {
+    "id": 101,
+    "order": 101,
+    "type": "BRP",
+    "description": "Issue 101",
+    "repository": "https://github.com/npaurea/Java.git",
+    "branch": "master"
+  },
+  {
+    "id": 102,
+    "order": 102,
+    "type": "BRP",
+    "description": "Issue 102",
+    "repository": "https://github.com/ashishaurea/restx.git",
+    "branch": "master"
+  },
+  {
+    "id": 103,
+    "order": 103,
+    "type": "BRP",
+    "description": "Issue 103",
+    "repository": "https://github.com/trilogy-group/aurea-codefix.git",
+    "branch": "master"
+  }
+]

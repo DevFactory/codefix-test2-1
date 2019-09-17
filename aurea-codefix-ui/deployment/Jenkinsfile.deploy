@@ -1,0 +1,57 @@
+ def notifySlack(message, color) {
+      withCredentials([string(credentialsId: 'CODEFIX_BOT_SLACK_TOKEN', variable: 'SLACK_TOKEN')]) {
+          slackSend botUser: true,
+                    channel: 'codefix-ci',
+                    color: color,
+                    message: "${message}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})",
+                    teamDomain: 'devfactorydev',
+                    token: "${env.SLACK_TOKEN}"
+      }
+  }
+
+  def notifySlackStarted() {
+    notifySlack("STARTED", "#FFFF00")
+  }
+
+  def notifySlackSuccessful() {
+    notifySlack("SUCCESSFUL", "#00FF00")
+  }
+
+  def notifySlackFailed() {
+    notifySlack("FAILED", "#FF0000")
+  }
+
+ node {
+    try {
+      currentBuild.result = "SUCCESS"
+      notifySlackStarted()
+
+      stage("Cleanup Workspace") {
+          deleteDir()
+      }
+
+      stage("Download Code") {
+          checkout scm
+      }
+
+      stage('Deploy') {
+          withCredentials([usernamePassword(usernameVariable: 'AD_USERNAME', passwordVariable: 'AD_PASSWORD', credentialsId: 'AD_CREDENTIALS'),
+          file(credentialsId: 'DEVFACTORY_CRT', variable: 'DEVFACTORY_CRT'),
+          file(credentialsId: 'DEVFACTORY_KEY', variable: 'DEVFACTORY_KEY')]) {
+              sh "chmod +x ./aurea-codefix-ui/deployment/deploy.sh"
+              sh "./aurea-codefix-ui/deployment/deploy.sh '${params.command}' '$AD_USERNAME' '$AD_PASSWORD' '$DEVFACTORY_CRT' '$DEVFACTORY_KEY'"
+          }
+      }
+
+      if("${currentBuild.result}" == "SUCCESS") {
+        notifySlackSuccessful()
+      } else {
+        notifySlackFailed()
+      }
+
+    } catch (e) {
+      currentBuild.result = "FAILED"
+      notifySlackFailed()
+      throw e
+    }
+}

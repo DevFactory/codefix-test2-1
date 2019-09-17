@@ -1,0 +1,47 @@
+@import 'palette';
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin column-text-truncate() {
+  .df-grid-table-body__cell-data {
+    display: block;
+    @include text-truncate();
+  }
+}
+
+:host {
+  ::ng-deep {
+    .grid {
+      height: calc(100vh - 214px);
+
+      .df-grid-scrollable-view__body {
+        height: calc(100vh - 276px);
+      }
+
+      &__repository {
+        width: 215px;
+        @include column-text-truncate();
+      }
+
+      &__branch {
+        width: 180px;
+        @include column-text-truncate();
+      }
+    }
+  }
+}
+
+.navigation {
+  z-index: 1;
+}
+
+.type {
+  &__text {
+    text-decoration: underline;
+    color: $main-text-color;
+  }
+}

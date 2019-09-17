@@ -1,0 +1,14 @@
+{
+  "/api/repositories": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+  "/api/issues": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+  "/api/orders": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+}

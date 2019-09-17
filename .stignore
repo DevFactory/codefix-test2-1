@@ -1,0 +1,10 @@
+.stignore
+.stfolder
+.git
+aurea-codefix-backend/build
+aurea-codefix-antipatterns-api/build
+venv
+devspace/venv
+aurea-codefix-ui/node_modules
+aurea-codefix-ui/.gradle
+aurea-codefix-ui/build

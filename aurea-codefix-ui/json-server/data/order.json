@@ -1,0 +1,14 @@
+{
+  "startDate": "2019-05-23T10:58:11.048Z",
+  "dueDate": "2019-06-23T10:58:11.048Z",
+  "issues": [
+    {
+      "id": 1,
+      "order": 1,
+      "type": "BRP",
+      "description": "Issue 1",
+      "repository": "https://github.com/npaurea/Java.git",
+      "branch": "master"
+    }
+  ]
+}

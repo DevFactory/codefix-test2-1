@@ -1,0 +1,168 @@
+@import '../../../../../../node_modules/@devfactory/ngx-df/core/core';
+@import 'palette';
+
+$toggle-on: #28bd8b;
+$toggle-container: #ededed;
+$toggle-off: #cfd7d9;
+$processed-issues: #a8b7be;
+$remaining-issues: #36a3f7;
+$pointer: #8198a3;
+$search-box-border: #ced4da;
+$search-box-btn-gradient-1: #fefefe;
+$search-box-btn-gradient-2: #f8f9fa;
+$issue-refresh: #cbd4d9;
+$issue-new: #455a64;
+$yellow-box-background: #fff3cd;
+$yellow-box-border: #ffeeba;
+
+:host {
+  ::ng-deep {
+    .df-select__input {
+      min-width: 130px;
+    }
+
+    .df-card__header {
+      color: map-get($df-dark, 2);
+      padding: 0;
+    }
+
+    .df-table-paginator__options__btn--refresh {
+      display: none;
+    }
+
+    .grid {
+      height: calc(100vh - 151px);
+
+      &__status {
+        width: 160px;
+      }
+
+      &__rerun {
+        width: 55px;
+      }
+
+      &__branch {
+        width: 170px;
+      }
+
+      &__active {
+        width: 60px;
+
+        .df-grid-column__title {
+          display: flex;
+        }
+
+        .df-slide-toggle__content {
+          display: none;
+        }
+      }
+    }
+
+    .df-grid-table-body__cell {
+      overflow: unset;
+    }
+
+    .df-grid__row--data {
+      height: 3.5rem;
+    }
+  }
+
+  .search-box {
+    border: 1px solid $search-box-border;
+    width: 340px;
+    border-radius: 6px;
+
+    &__input {
+      border: none;
+      width: calc(100% - 145px);
+      border-left: 1px solid $search-box-border;
+      padding: 0 10px;
+    }
+
+    &__icon {
+      min-width: 33px;
+
+      &-reset {
+        background: map-get($df-light, 1);
+
+        .fa {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__button {
+      border-left: 1px solid $search-box-border;
+      border-radius: 0;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      transition: none;
+      background: linear-gradient(to bottom, $search-box-btn-gradient-1, $search-box-btn-gradient-2 97%);
+
+      &::before {
+        border-radius: 0;
+      }
+
+      ::ng-deep .df-button__content {
+        transition: none;
+      }
+    }
+  }
+
+  .branch-select {
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &__activate {
+      cursor: default;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  .paginator {
+    width: auto;
+  }
+
+  .no-repo__note {
+    font-size: 11px;
+  }
+}
+
+.navigation {
+  z-index: 1;
+}
+
+.status {
+  &--about {
+    color: $df-amber;
+  }
+
+  &--onboarded {
+    color: map-get($df-dark, 4);
+  }
+
+  &--detecting {
+    color: $df-blue;
+  }
+
+  &--completed {
+    color: map-get($df-dark, 2);
+  }
+
+  &--fixing {
+    color: $df-green;
+  }
+}
+
+.select {
+  padding: 5px;
+  background: $yellow-box-background;
+  border: 1px solid $yellow-box-border;
+  border-radius: 5px;
+
+  > .link {
+    color: $df-blue;
+    cursor: pointer;
+  }
+}

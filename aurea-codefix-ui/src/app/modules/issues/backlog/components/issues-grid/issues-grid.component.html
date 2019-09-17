@@ -1,0 +1,149 @@
+<df-card class="d-flex flex-column grid">
+  <ng-container *ngIf="showAnalyzing && !issuesList.length">
+      <div class="d-flex flex-column justify-content-center align-items-center analyzing">
+          <img  src="/assets/img/issues/detecting-issues.gif"
+                alt="detecting issues animation">
+          <h4>Detecting Issues...</h4>
+           <p class="mb-0 text-secondary">We are looking for issues in your code.</p>
+          <p class="mb-0 text-secondary">
+            When we finish, you will receive an email with a link to this page so you can review all the issues found.
+          </p>
+        </div>
+  </ng-container>
+  <ng-container *ngIf="loaded && issuesList.length">
+    <div class="mb-1 pt-3 px-3 d-flex justify-content-between">
+      <div class="d-flex flex-column">
+        <span class="text-secondary">
+          List of issues found sorted by the order in which they are going to be fixed. Modify this order by right
+          clicking or dragging issues around.
+        </span>
+      </div>
+    </div>
+  </ng-container>
+  <df-card-content class="py-0 d-flex flex-column">
+    <div *ngIf="!issuesList" 
+         class="col py-5 d-flex justify-content-center align-items-center">
+      <div class="df-loader"></div>
+    </div>
+    <ng-container *ngIf="loaded && issuesList.length !== 0">
+      <df-grid #grid 
+               class="d-block col p-0" 
+               [value]="issuesList" 
+               [scrollable]="true"
+               [rowStyleClass]="getRowClass"
+               (rowClick)="onRowClick($event.originalEvent, $event.data)"
+               (rowSelect)="onRowSelect($event.originalEvent.mouseEvent, $event.data)"
+               (rowUnselect)="onRowUnselect($event.originalEvent.mouseEvent, $event.data)"
+               [(selection)]="issuesSelected">
+
+        <df-grid-column styleClass="grid__selection" 
+                        selectionMode="multiple"></df-grid-column>
+
+        <df-grid-column header="Order" 
+                        styleClass="grid__order">
+          <ng-template let-issue="rowData" 
+                       dfGridTemplate="body">
+            <div class="text-center">{{ issue.order }}</div>
+          </ng-template>
+        </df-grid-column>
+
+        <df-grid-column field="type" header="Issue type">
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <div class="py-1 d-flex">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <a class="mr-3 type__text" target="_blank" draggable="false"
+                    [href]="issue.issueUrl">{{ issue.type }} &#58;&#58; {{ issue.description }}</a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </df-grid-column>
+
+        <df-grid-column field="repository" header="Repository" styleClass="grid__repository">
+            <ng-template let-issue="rowData" dfGridTemplate="body">
+                <ng-container>
+                  <div [innerHTML]="formatRepositoryName(issue.repository)"></div>
+                </ng-container>
+            </ng-template>
+          </df-grid-column>
+        
+        <df-grid-column field="branch" header="Branch" styleClass="grid__branch">
+            <ng-template let-issue="rowData" dfGridTemplate="body">
+                <ng-container>{{ issue.branch }}</ng-container>
+            </ng-template>
+        </df-grid-column>
+
+        <df-grid-column field="directory" header="Directory" styleClass="grid__directory">
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <ng-container *ngIf="issue.directory">{{ issue.directory }}</ng-container>
+          </ng-template>
+        </df-grid-column>
+
+        <df-grid-column styleClass="grid__menu" >
+          <ng-template let-issue="rowData" dfGridTemplate="body">
+            <div class="d-flex justify-content-center">
+              <div #origin
+                   class="d-flex justify-content-end menu__toggle"
+                   container="body">
+                <button class="px-2 font-weight-normal df-button--sm"
+                        type="button"
+                        df-button
+                        df-clear-button
+                        cdkOverlayOrigin
+                        (click)="onMenuClick($event, issue, origin, menu)">
+                  <i class="grid__menu-icon"
+                     aria-hidden="true">...</i></button>
+              </div>
+            </div>
+          </ng-template>
+        </df-grid-column>
+      </df-grid>
+    </ng-container>
+  </df-card-content>
+</df-card>
+
+<ng-template #menu
+             let-issue
+             let-origin="origin">
+  <div class="py-2 menu">
+    <button class="px-3 dropdown-item"
+            type="button"
+            (click)="onMoveToTopClick(issue)">
+      <i class="fa fa-fw fa-arrow-up mr-2 menu__icon"
+         aria-hidden="true"></i>Move to top
+    </button>
+    <button class="px-3 dropdown-item"
+            type="button"
+            (click)="onMoveToBottomClick(issue)">
+      <i class="fa fa-fw fa-arrow-down mr-2 menu__icon"
+         aria-hidden="true"></i>Move to bottom
+    </button>
+    <div class="px-3 py-1 d-flex flex-column">
+      <div class="d-flex align-items-center menu__label">
+        <i class="fa fa-fw fa-hashtag mr-2 menu__icon"
+           aria-hidden="true"></i>
+        <span class="mr-1">Move to</span>
+        <df-input-container class="mr-2 menu__input">
+          <input type="number"
+                 placeholder="position"
+                 [formControl]="position"
+                 (keydown.enter)="onPositionConfirm(issue)">
+        </df-input-container>
+        <button class="px-2 menu__move"
+                type="button"
+                theme="light"
+                df-button
+                [disabled]="position.invalid"
+                (click)="onPositionConfirm(issue)">Move</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<div #drag
+     class="px-3 py-2 position-absolute dragged">
+  <small class="d-flex justify-content-center align-items-center font-weight-bold number">
+    {{ getInvolvedIssuesTotal(draggingIssue) }}
+  </small>
+</div>

@@ -1,0 +1,27 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import 'palette';
+
+h5 {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero {
+  padding-top: 135px;
+  color: map-get($df-light, 7);
+  background: #141c27;
+
+  &__button {
+    margin-bottom: 125px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .hero {
+    &__button {
+      margin-bottom: 100px;
+    }
+  }
+}

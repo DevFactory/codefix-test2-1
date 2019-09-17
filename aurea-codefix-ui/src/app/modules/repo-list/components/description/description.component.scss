@@ -1,0 +1,108 @@
+@import 'palette';
+
+$green: #16bb96;
+
+@mixin background-size-cover {
+  background-size: cover;
+}
+
+:host {
+  display: block;
+}
+
+::ng-deep {
+  .repo-list-description-modal {
+    .df-modal__content {
+      width: auto;
+    }
+  }
+}
+
+.modal-actions {
+  ::ng-deep {
+    .df-checkbox {
+      .df-checkbox__layout {
+        align-items: center;
+        color: map-get($df-dark, 3);
+
+        .fa {
+          &-check-square {
+            color: $df-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  padding: 50px;
+  color: map-get($df-light, 1);
+  background-image: url('/assets/img/repo-list/description/header-background.svg');
+  background-size: cover;
+}
+
+.bubble {
+  width: 116px;
+  height: 116px;
+  border-radius: 58px;
+  border: 2px solid $green;
+  box-shadow: 0 3px 6px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.23);
+
+  &--repos {
+    background-image: url('/assets/img/repo-list/description/activate-repository.png');
+    @include background-size-cover();
+  }
+
+  &--branches {
+    background-image: url('/assets/img/repo-list/description/change-branch.png');
+    @include background-size-cover();
+  }
+
+  &--wait {
+    background-image: url('/assets/img/repo-list/description/wait-for-results.png');
+    @include background-size-cover();
+  }
+
+  &__wrapper {
+    bottom: 25px;
+  }
+}
+
+.arrow {
+  width: 75px;
+  height: 1px;
+  background-color: map-get($df-dark, 1);
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 9px solid map-get($df-dark, 1);
+    transform: translateY(-50%);
+  }
+}
+
+.instruction {
+  &__wrapper {
+    margin-bottom: 35px;
+  }
+
+  &__content {
+    width: 165px;
+  }
+
+  &__text {
+    font-size: 13px;
+    white-space: normal;
+  }
+}
+
+.button {
+  margin-bottom: 30px;
+}

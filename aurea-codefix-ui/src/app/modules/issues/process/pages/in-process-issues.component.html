@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="position-relative navigation">
+        <app-navigation-tabs class="position-relative navigation" [tabs]="tabs">
+        </app-navigation-tabs>
+      </div>
+      <app-issues-grid
+        [orderObservable]="orderStore.order"
+        [loadedObservable]="orderStore.loaded">
+      </app-issues-grid>
+    </div>
+  </div>
+</div>

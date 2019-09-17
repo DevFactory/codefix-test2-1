@@ -1,0 +1,68 @@
+app:
+  security:
+    audience: ${CODESERVER_AUTH0_AUDIENCE}
+    issuer: ${CODESERVER_AUTH0_ISSUER}
+    domain: devfactory.auth0.com
+    clientId: ${CODESERVER_CLIENTID}
+    clientSecret: ${CODESERVER_SECRETKEY}
+  integration:
+    codeserver:
+      codeServerUrl: http://codeserver-framework-dev.devfactory.com
+      subscribeToCommitQueue: true
+    brp:
+      notificationQueue: devfactory_brp_to_codefix_notifications_dev
+      brpUrl: http://javabrp-dev.devfactory.com
+    assemblyline:
+      orderQueue: devfactory_codefix_to_assembly_line_orders_dev
+      confirmationsQueue: devfactory_assembly_line_to_codefix_confirmations_dev
+      fixesQueue: devfactory_assembly_line_to_codefix_fixes_dev
+      notificationQueue: devfactory_brp_to_codefix_notifications
+    github:
+      instanceUrl: ${GITHUB_WEBHOOK_URL}
+      syncCron: ${GITHUB_SYNC_CRON:0 0 6 * * ?} # every day at 6 am.
+      assemblyLineTeam: ${GITHUB_AL_TEAM:3315749}
+      codefixUser: codefix-service
+      codefixOrg: ${GITHUB_FORK_ORG:devfactory}
+      codefixToken: ${GITHUB_SECURITY_TOKEN}
+  notification:
+    frontendUrl: https://codefix-dev.devfactory.com
+
+logging:
+  level:
+    ROOT: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, loggers, metrics
+
+spring:
+  datasource:
+    url: jdbc:mysql://${CODEFIX_MYSQL_DB_HOST}:3306/${CODEFIX_MYSQL_DB_NAME}?useSSL=false
+    username: ${CODEFIX_MYSQL_DB_USERNAME}
+    password: ${CODEFIX_MYSQL_DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+    locations: classpath:db/migration/{vendor}
+    baselineOnMigrate: true
+  jms:
+    listener:
+      concurrency: 3
+      max-concurrency: 10
+  freemarker:
+    template-loader-path: classpath:/notification/templates
+
+aws:
+  ses:
+    fromEmail: codefix-noreply@devfactory.com
+    fromName: Codefix
+    subject: Codefix Notification
+    destination: codefix-noreply@devfactory.com
+    content: Codefix sample email
+
+jira:
+  url: ${JIRA_URL:https://jirastg2.devfactory.com}
+  principal: ${JIRA_PRINCIPAL}
+  secret: ${JIRA_SECRET}

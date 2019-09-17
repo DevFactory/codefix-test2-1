@@ -1,0 +1,21 @@
+@import 'palette';
+
+:host {
+  background: map-get($df-light, 1);
+}
+
+.header {
+  height: 70px;
+}
+
+.logo {
+  width: 65px;
+  height: 30px;
+}
+
+.login {
+  font-weight: 500;
+  text-decoration: none;
+  color: $main-text-color;
+  cursor: pointer;
+}

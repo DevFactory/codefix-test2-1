@@ -1,0 +1,4 @@
+boto==2.49.0
+tqdm==4.28.1
+beautifulsoup4==4.6.3
+requests_ntlm==1.1.0

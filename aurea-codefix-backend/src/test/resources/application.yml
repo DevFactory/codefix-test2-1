@@ -1,0 +1,40 @@
+app:
+  security:
+    audience: testAudience
+    issuer: https://test.issues.com/
+    domain: test.auth0.com
+    clientId: abc-123
+    clientSecret: secret-abc-123
+  integration:
+    codeserver:
+      codeServerUrl: http://codeserver.dummy.com
+      subscribeToCommitQueue: false
+    brp:
+      notificationQueue: brp-queue
+      brpUrl: http://javabrp-dev.devfactory.com
+    assemblyline:
+      orderQueue: devfactory_codefix_to_assembly_line_orders_dev
+      confirmationsQueue: devfactory_assembly_line_to_codefix_confirmations_dev
+      fixesQueue: devfactory_assembly_line_to_codefix_fixes_dev
+      notificationQueue: devfactory_brp_to_codefix_notifications
+    github:
+      instanceUrl: http://codefix-url.com
+      syncCron: 0 * * * * ?
+      assemblyLineTeam: 55
+      codefixUser: codefix-user
+      codefixOrg: codefix-org
+      codefixToken: a-secret-token
+  notification:
+    frontendUrl: https://codefix-dev.devfactory.com
+
+spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/migration/{vendor}
+  freemarker:
+    template-loader-path: classpath:/notification/templates
+
+jira:
+  url: ${JIRA_URL:https://jirastg2.devfactory.com}
+  principal: ${JIRA_PRINCIPAL}
+  secret: ${JIRA_SECRET}

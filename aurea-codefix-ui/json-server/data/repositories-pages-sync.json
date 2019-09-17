@@ -1,0 +1,146 @@
+{
+  "ignoredItems": [
+    {
+      "url": "https://github.com/ignored/1.git",
+      "branch": "master",
+      "reason": "Repository https://github.com/ignored/1.git was onboarded by another User"
+    },
+    {
+      "url": "https://github.com/ignored/2.git",
+      "branch": "master",
+      "reason": "Repository https://github.com/ignored/2.git was onboarded by another User"
+    },
+    {
+      "url": "https://github.com/ignored/3.git",
+      "branch": "dev",
+      "reason": "Repository https://github.com/ignored/3.git already has Branch master onboarded. Branch dev is ignored"
+    }
+  ],
+  "repositories": {
+    "total": 43,
+    "pages": 3,
+    "currentPage": 1,
+    "content": [
+      {
+        "id": 1,
+        "url": "https://github.com/npaurea/Java.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 2,
+        "url": "https://github.com/ashishaurea/restx.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 3,
+        "url": "https://github.com/trilogy-group/aurea-codefix.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 4,
+        "url": "https://github.com/ashishaurea/telegram-api.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 5,
+        "url": "https://github.com/chomnoue/springfox-demos.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 6,
+        "url": "https://github.com/trilogy-group/codegraph.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 7,
+        "url": "https://github.com/rathnasuresh/demo.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 8,
+        "url": "https://github.com/ashishaurea/openstack4j.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 9,
+        "url": "https://github.com/cristhian-recalde/sharpvfi.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 10,
+        "url": "https://github.com/trilogy-group/acr-devfactory-codeserver-framework.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 11,
+        "url": "https://github.com/npaurea/rgn_duplicate_code_limit_test711.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 12,
+        "url": "https://github.com/ashishaurea/Java-6.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 13,
+        "url": "https://github.com/ashishaurea/javakiteconnect.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 14,
+        "url": "https://github.com/ashishaurea/code-13.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 15,
+        "url": "https://github.com/trilogy-group/Acorn-EPS-Test.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 16,
+        "url": "https://github.com/trilogy-group/jive-analytics-ca-ingress-redshift.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 17,
+        "url": "https://github.com/jcamiloradamesa/featureqa-gherkin-testrail-poc-javaapp.git",
+        "branch": "master",
+        "active": false
+      },
+      {
+        "id": 18,
+        "url": "https://github.com/cesarguijarro-aurea/evosuite.git",
+        "branch": "master",
+        "active": true
+      },
+      {
+        "id": 19,
+        "url": "https://github.com/trilogy-group/jive-analytics-ca-clapi.git",
+        "branch": "1.1-release",
+        "active": false
+      },
+      {
+        "id": 20,
+        "url": "https://github.com/trilogy-group/brp_rules_test.git",
+        "branch": "master",
+        "active": true
+      }
+    ]
+  }
+}
